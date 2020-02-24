@@ -26,10 +26,10 @@ def os_name(repository_ctx):
     """
     os_name = repository_ctx.os.name.lower()
     if os_name.startswith("mac os"):
-        return "darwin_amd64"
+        return "darwin_arm64"
     elif os_name.find("windows") != -1:
-        return "windows_amd64"
+        return "windows_arm64"
     elif os_name.startswith("linux"):
-        return "linux_amd64"
+        return "linux_arm64"
     else:
         fail("Unsupported operating system: " + os_name)
